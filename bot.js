@@ -13,7 +13,7 @@ const token = "NTAyODE2OTA3ODUwODA5MzQ1.Dqtcbw.q-cOwODtj-GojYm4K30WqNYUsHI";
 
 client.on("ready", () => {
   console.log("Vulnix | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`Ritual Ticket |${prefix}new`);
+  client.user.setGame(`تحت الصيانة |${prefix}new`);
 });
 
 
