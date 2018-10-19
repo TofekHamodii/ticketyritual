@@ -61,12 +61,6 @@ function clean(text) {
 const prefix = "-";
 const token = "NTAyODE2OTA3ODUwODA5MzQ1.Dqtcbw.q-cOwODtj-GojYm4K30WqNYUsHI";
 
-client.on("ready", () => {
-  console.log("Vulnix | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`تحت الصيانة |${prefix}new`);
-});
-
-
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
