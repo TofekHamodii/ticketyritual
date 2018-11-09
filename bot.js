@@ -1218,6 +1218,7 @@ client.on('message', function(message) {
   }
 });
 
+var prefix = "-"
 client.on('message', message => {
 
     if(message.content === prefix + "-mutechannel") {
@@ -1232,7 +1233,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__
            });
              }
 
- if(message.content === prefix + "f!unmutechannel") {
+ if(message.content === prefix + "unmutechannel") {
                      if(!message.channel.guild) return message.reply('** This command only for servers**');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
@@ -1247,7 +1248,6 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__�
       
     
 }); 
-
 
 
 client.login(process.env.BOT_TOKEN); 
