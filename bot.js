@@ -1217,7 +1217,7 @@ client.on('message', message => {
 
 client.on("message", msg => {
     var prefix = "-";
-if(msg.content.startsWith (prefix + "id")) {
+if(msg.content.startsWith (prefix + id)) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
 embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
