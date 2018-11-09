@@ -1222,7 +1222,7 @@ client.on('message', function(message) {
 
 
    client.on("message", msg => {
-           var prefix = "-";
+    var prefix = "-";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
       const embed = new Discord.RichEmbed();
@@ -1241,4 +1241,4 @@ client.on('message', function(message) {
   }
 });
 
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN);  
