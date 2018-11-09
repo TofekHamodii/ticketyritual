@@ -1176,5 +1176,92 @@ client.on('message', message => {
   }
 });
 
+client.on('message', function(message) {
+    if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            let command = message.content.split(" ")[0];
+        if(message.content.includes('discord.gg')){
+        message.reply (' ')
+           if(!message.channel.guild) return message.reply('** This command only for servers**');
+     message.member.addRole(message.guild.roles.find('name', 'Muted')); 
+    const embed500 = new Discord.RichEmbed()
+      .setTitle("❌ | تمت معاقبتك")
+            .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
+            .setColor("c91616")
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setAuthor(message.author.username, message.author.avatarURL) 
+        .setFooter(`${message.guild.name} Server`)
+     message.channel.send(embed500) 
+    
+        
+    }
+    }
+})
+
+client.on('message', message => {
+    let args = message.content.split(' ').slice(1);
+    if(message.content.split(' ')[0] == '-sug') 
+    var embed = new Discord.RichEmbed()
+
+    .setColor('RANDOM')
+    .addField('New Suggestion',`${args}`,true)
+    .addField('By',`${message.author.tag}`,true)
+    .setTimestamp()
+
+    let suggests = message.guild.channels.find(`name`, "suggestions");
+    suggests.send(embed).then(msg => {
+        msg.react('✅')
+    .then(() => msg.react('❌'))
+    })
+
+});
+
+client.on("message", msg => {
+    var prefix = "-";
+if(msg.content.startsWith (prefix + "id")) {
+if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+const embed = new Discord.RichEmbed();
+embed.addField("🌪  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+   .addField("🆔  الايدي", `**[ ${msg.author.id} ]**`, true)
+   .setColor("RANDOM")
+   .setFooter(msg.author.username , msg.author.avatarURL)
+   .setThumbnail(`${msg.author.avatarURL}`)
+   .setTimestamp()
+   .setURL(`${msg.author.avatarURL}`)
+   .addField('🕵  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+   .addField('🛰   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
+   .addField('🎖  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
+   .addField('🤖  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
+msg.channel.send({embed: embed})
+}
+});
+
+client.on("message", message=> {
+    if (message.content.startsWith("/sayTo")) {
+      let filter = m => m.author.id === message.author.id
+      let channelBOT = "510202825087647744"
+      message.channel.send(("", {embed: {
+        title: "` ➡ `** Messege System **",
+        color: 0x06DF00,
+        timestamp: new Date(),
+        description:"510202825087647744",
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "<@478601713020960798> BY VOID"
+        }}
+
+client.on("message", message=> {
+    if (message.content.startsWith("/sayTo")) {
+      let filter = m => m.author.id === message.author.id
+      let channelBOT = "510202825087647744"
+      message.channel.send(("", {embed: {
+        title: "` ➡ `** Messege System **",
+        color: 0x06DF00,
+        timestamp: new Date(),
+        description:"510202825087647744",
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "<@478601713020960798> BY VOID"
+        }}
+
 
 client.login(process.env.BOT_TOKEN);
