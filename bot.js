@@ -27,7 +27,7 @@ client.on("message", message => {
    message.react("😜")
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .addField("『Diamond Bot』 『اسم البوت』", true)
+      .addField("『Neptune System』 『اسم البوت』", true)
 
       .addField("『-help-all』😘『اذا تبي جميع الاوامر مع اوامر اضافية』😵", true)
       
