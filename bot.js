@@ -1218,8 +1218,6 @@ client.on('message', function(message) {
   }
 });
 
-Alpha Codescopyright arrow_down
-
 client.on('message', async message =>{
   if (message.author.boss) return;
     var prefix = "-";
@@ -1247,14 +1245,14 @@ if (!message.content.startsWith(prefix)) return;
         var muteembeddm = new Discord.RichEmbed()
         .setAuthor(Warned!, user.displayAvatarURL)
         .setDescription(${user} تم اعطائك تحذير
-${message.author.tag}  بواسطة
-[ ${reason} ] : السبب
-اتمنى ان لا يتكرر هذا الغلط مجددا)
-        .setFooter(في سيرفر : ${message.guild.name})
+${message.author.tag}  from
+[ ${reason} ] : reason
+(  try to dont break the rules )
+        .setFooter(From  : ${message.guild.name})
         .setColor("RANDOM")
     user.send( muteembeddm);
   }
-  });
+  }); 
 
 
 client.login(process.env.BOT_TOKEN); 
