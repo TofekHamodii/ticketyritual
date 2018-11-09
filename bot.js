@@ -12,7 +12,7 @@ const prefix = "PREFIX";
 
 client.on("ready", () => {
   console.log("Simple | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`Support Magic |${-}new`);
+  client.user.setGame(`Support  | -new`);
 });
 
 
@@ -24,8 +24,8 @@ if (message.content.toLowerCase().startsWith( PREFIX + `help`))
     .setTitle(`:mailbox_with_mail: Simple Help`)
     .setColor(0xCF40FA)
     .setDescription(`مرحبا انا بوت التكت انا متخصص لمساعده الناس وهذه هي اوامري:`)
-    .addField(`Tickets`, `[${-}new]() > يفتح لك روم يراها فقط الادارة\n[${-}close]() > اغلاق الروم`)
-    .addField(`Other`, `[${-}help]() > يريك اوامر البوت ويساعدك\n[${-}ping]() > يريك بينق البوت اذا متأخر او لا\n[${-}about]() > Tells you all about Vulnix`)
+    .addField(`Tickets`, `[-new]() > يفتح لك روم يراها فقط الادارة\n[-close]() > اغلاق الروم`)
+    .addField(`Other`, `[-help]() > يريك اوامر البوت ويساعدك\n[ -ping]() > يريك بينق البوت اذا متأخر او لا\n[-about]() > Tells you all about Vulnix`)
     message.channel.send({ embed: embed });
   }
 
