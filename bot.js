@@ -1218,36 +1218,20 @@ client.on('message', function(message) {
   }
 });
 
-var prefix = "-"
-client.on('message', message => {
+client.on('message', msg => {
 
-    if(message.content === prefix + "-mutechannel") {
-                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+    if (msg.content == '$join') {
+        if (msg.member.voiceChannel) {
 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: false
-
-           }).then(() => {
-               message.reply("**__تم تقفيل الشات__ ✅ **")
-           });
-             }
-
- if(message.content === prefix + "unmutechannel") {
-                     if(!message.channel.guild) return message.reply('** This command only for servers**');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
-           message.channel.overwritePermissions(message.guild.id, {
-         SEND_MESSAGES: true
-
-           }).then(() => {
-               message.reply("**__تم فتح الشات__✅**")
-           });
-             }
-             
-      
-    
-}); 
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
+    }
+}
+})
+client.on('ready', () => { //code bot not leave room voice //Bot Is Online
+    client.channels.get("510202825087647744").join(); //by : iBeAnthonyD
+    });
 
 
 client.login(process.env.BOT_TOKEN); 
