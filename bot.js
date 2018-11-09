@@ -775,9 +775,10 @@ client.on('ready', () => {
    client.user.setGame(" -help | -invite ");
 }); 
 
+var prefix = "-"
 client.on("message", message => {
               var args = message.content.substring(prefix.length).split(" ");
-              if (message.content.startsWith(prefix + "clear")) {
+              if (message.content.startsWith(prefix + "امسح")) {
                   if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
      if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
           var msg;
