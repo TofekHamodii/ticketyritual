@@ -1235,33 +1235,6 @@ msg.channel.send({embed: embed})
 }
 });
 
-client.on("message", message=> {
-    if (message.content.startsWith("/sayTo")) {
-      let filter = m => m.author.id === message.author.id
-      let channelBOT = "510202825087647744"
-      message.channel.send(("", {embed: {
-        title: "` ➡ `** Messege System **",
-        color: 0x06DF00,
-        timestamp: new Date(),
-        description:"510202825087647744",
-        footer: {
-          icon_url: client.user.avatarURL,
-          text: "<@478601713020960798> BY VOID"
-        }}
-
-client.on("message", message=> {
-    if (message.content.startsWith("/sayTo")) {
-      let filter = m => m.author.id === message.author.id
-      let channelBOT = "510202825087647744"
-      message.channel.send(("", {embed: {
-        title: "` ➡ `** Messege System **",
-        color: 0x06DF00,
-        timestamp: new Date(),
-        description:"510202825087647744",
-        footer: {
-          icon_url: client.user.avatarURL,
-          text: "<@478601713020960798> BY VOID"
-        }}
 
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
