@@ -83,7 +83,7 @@ client.on("message", message => {
     lastDaily:'Not Collected',
     level: 0,
     points: 0,
-    credits: 3,
+    credits: 1000000,
   };
  
  
