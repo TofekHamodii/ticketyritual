@@ -12,7 +12,7 @@ client.on('message', msg => {
 });
 
 client.on('ready',  () => {
-  console.log('By : Simple ');
+  console.log('By : حسوني العراقي ');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -382,9 +382,6 @@ client.on("message", message => {
 -support| القسم الثاني  الدعم الفني و المساعدة
 
 - مصمم البوت Simple , ¹#3386 -
-
-
-
 
 
 
@@ -824,7 +821,7 @@ client.on("message", message => {
 
 
  client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'welcome');
+  const channel = member.guild.channels.find('name', 'neptune');
   if (!channel) return;
   channel.send(`***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا حياك الله***, ${member}`);
   
@@ -841,13 +838,12 @@ if (message.content === '-support') {
   
   
 
-client.on('message', message => {
-     if (message.content === -'^support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
-     
+  client.on('message', message => {
+    if (message.content === "-support") {
+    let embed = new Discord.RichEmbed()
+ .setAuthor(message.author.username)
+ .setColor("#9B59B6")
+ .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص") 
      
      
   message.channel.sendEmbed(embed);
