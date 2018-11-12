@@ -70,7 +70,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 
 client.on('message', function(message) {
-    if (message.content == "#clear") {
+    if (message.content == "-clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
@@ -736,14 +736,14 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$help | DJ Dam System`,"http://twitch.tv/DJ")
+client.user.setGame(`-help | Neptune`,"http://twitch.tv/DJ")
 client.user.setStatus("dnd")
 });
  
  
  
 client.on('message' , message => {
-if(message.content === '$help') {
+if(message.content === '-help') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
@@ -776,7 +776,7 @@ message.author.send(`
 ❧ -say ➺ البوت يكرر كلام انته تحدده
 ❧ -id ➺ لعرض معلوماتك
 ❧ -new ➺ لانشاء تذكرة
-─════════════ {✯ By ♛ NovritschPro#6808 ✯} ════════════─
+─════════════ {✯ By Simple , ¹#3386     ✯} ════════════─
 **
 `);
 }
